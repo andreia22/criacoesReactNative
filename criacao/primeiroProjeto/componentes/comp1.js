@@ -1,27 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {StyleSheet, Text } from 'react-native';
+import Estilos from '../estilos/estilos.js';
 
 let an;
-let cor;
+
 export default function(props) {
     an= props.ano
     cor=props.cor
     return(
-    <Text style={estilo.txt2, {color:cor}}>Eu consegui na {props.dia} mes={props.mes} ano={an} </Text>
+    <Text style={estilos.textotDia}>Eu consegui na {props.dia} mes={props.mes} ano={an} </Text>
     )
 }
 
-const estilo = StyleSheet.create({
-    txt1:{
-        //color: '#f00',
-        fontSize: 20,
-    },
-    txt2:{
-        //color: '#00f',
-        fontSize: 15,
-    }
-});
 
 
 
