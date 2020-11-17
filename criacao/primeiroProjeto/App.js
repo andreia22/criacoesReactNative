@@ -5,16 +5,30 @@ import C1  from './componentes/comp1'
 import Estilos from './estilos/Estilos.js';
 import Caixas  from './componentes/Caixas';
 
+
 export default function App1(){
+  let fExibir= true
   return(
     <View style={Estilos.conteiner}>
-      <Caixas/>
+      <Caixas exibir={fExibir}/>
       <Text style={Estilos.textoDia}>vamo que vamo</Text>
       <Text style={Estilos.textoPadrao}>cada dia aprendo mais</Text>
+      {fExibir?<Text>RENDERIZAÇÃO MOSTRE</Text>:<Text>NAO MOSTRE</Text>}
+      {fExibir && <Text>RENDERIZAÇÃO MOSTRE</Text>}
     </View>
   );
 };
 
+/*(AEROFUNCTION )
+const fExibir = (valor1)=> {
+  if(valor1){
+    return(<Text>RENDERIZAÇÃO MOSTRE</Text>)
+  }else{
+return(<Text>NAO MOSTRE</Text>)
+  }  
+}*/
+/*RENDERIZAÇÃO CONDICIONAL: podeser usado apartir de uma funcao apenas uma varivel que ja e inicializade como TRUE
+ ou FALSE e podemos usar aerofunction aerofunction.
 /* propriedades: style e uma propriedade tambem, 
 /* formatacao inline enecessario duas chaves*/
 /*Podemos ulilizar tanto o componente de classe como o de função, ma e ncessario faser a importacao do
