@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import {StyleSheet} from 'react-native';
+import React from 'react';
 
 
 export default StyleSheet.create({
@@ -10,16 +11,16 @@ export default StyleSheet.create({
         justifyContent:'center',
     },
     textoDia:{
-        color:'#0ff',
-        fontSize:15,
+        color:'#f0f',
+        fontSize:25,
     },
     textoTitulo:{
-        color:'#f00', 
-        fontSize:30,
+        color:'#090', 
+        fontSize:20,
     },
     textoPadrao:{
-        color:'#fff', 
-        fontSize:40,
+        color:'#06c', 
+        fontSize:30,
     }            
 
 }) 
