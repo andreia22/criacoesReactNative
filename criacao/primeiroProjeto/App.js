@@ -3,14 +3,12 @@ import React,{Component} from 'react';
 import { Text, View, StyleSheet } from 'react-native'; 
 import C1  from './componentes/comp1'
 import Estilos from './estilos/Estilos.js';
+import Caixas  from './componentes/Caixas';
 
 export default function App1(){
   return(
     <View style={Estilos.conteiner}>
-      <C1 dia="segunda" mes="11"  ano="2020" />
-      <C1 dia="terca" mes="11" ano="2020" />
-      <C1 dia="quarta"  mes="11"ano="2020" />
-      <C1 dia="quinta"  mes="11" ano="2020" />
+      <Caixas/>
       <Text style={Estilos.textoDia}>vamo que vamo</Text>
       <Text style={Estilos.textoPadrao}>cada dia aprendo mais</Text>
     </View>
