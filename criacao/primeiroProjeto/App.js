@@ -1,23 +1,41 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{Component} from 'react';
-import { Text, View, StyleSheet } from 'react-native'; 
+import { StyleSheet, Text, View,  Image } from 'react-native'; 
 import C1  from './componentes/comp1'
 import Estilos from './estilos/Estilos.js';
 import Caixas  from './componentes/Caixas';
 
 
 export default function App1(){
-  let fExibir= true
+  let fExibir= true;
   return(
     <View style={Estilos.conteiner}>
+      <Image
+        source={{uri:'http://marketingdeconteudo.com/wp-content/uploads/2016/08/imagens-gratis-1.jpg'}}
+         style={estlilo.logo}
+      />
       <Caixas exibir={fExibir}/>
       <Text style={Estilos.textoDia}>vamo que vamo</Text>
       <Text style={Estilos.textoPadrao}>cada dia aprendo mais</Text>
       {fExibir?<Text>RENDERIZAÇÃO MOSTRE</Text>:<Text>NAO MOSTRE</Text>}
       {fExibir && <Text>RENDERIZAÇÃO MOSTRE</Text>}
+      <Image 
+        source={require('./assets/logo1.jpg')}
+        />
     </View>
-  );
-};
+  )
+}
+const estlilo = StyleSheet.create({
+  logo:{
+    width:400,
+    height:150,
+    resizeMode: 'stretch'
+
+  }
+})
+
+
+
 
 /*(AEROFUNCTION )
 const fExibir = (valor1)=> {
