@@ -1,28 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{Component} from 'react';
-import { StyleSheet, Text, View,  Image, Button, Alert } from 'react-native';
+import { StyleSheet, Text, View,  Image, Button, Alert, ImageBackground } from 'react-native';
 import Lp from './componentes/ListaPlana.js'; 
 import Estilos from './estilos/Estilos.js';
 
-
+/*const imgbg1= './assets/imagens/back1.jpg'
+const imgbg2= './assets/imagens/back2.jpg'
+const imgbg3= './assets/imagens/back3.jpg' para usar com o requeire "source={require('imgbg1')}" */
 
 export default function App1(){
 return (
     <View style={Estilos.conteiner}>
+      <ImageBackground
+      source={{uri:'https://th.bing.com/th/id/OIP.VJ4sDDOOPuX3t1SAhmSClQHaE8?pid=Api&rs=1'}}
+      style={estilo.imagemFundo}
+      >
       <Text style={Estilos.textoDia}>Vendo</Text>
       <Text style={Estilos.textoPadrao}>Motivo mudança</Text>
       <Lp/>
+      </ImageBackground>
    </View>
     );
 };
 
-const estlilo = StyleSheet.create({
+const estilo = StyleSheet.create({
   logo:{
     width:400,
     height:150,
     resizeMode: 'stretch'
-
-  }
+ },
+ imagemFundo:{
+   flex:1,
+   resizeMode:"cover",
+ }
 })
 
 /*function msg(){

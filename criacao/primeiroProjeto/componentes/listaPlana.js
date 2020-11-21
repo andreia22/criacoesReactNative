@@ -13,15 +13,39 @@ const produtos= [
     },
     {
         id:'03',
-        desc: ['Mesa de centro de imbuia','600']
+        desc: ['Guarda roupa ','300']
     },
     {
         id:'04',
-        desc: ['Mesa de centro de imbuia','600']
+        desc: ['Comoda','300']
     },
     {
         id:'05',
-        desc: ['Mesa de centro de imbuia','600']
+        desc: ['Pia de coninha com armario','400']
+    },
+    {
+        id:'05',
+        desc: ['Pia de coninha com armario','400']
+    },
+    {
+        id:'06',
+        desc: ['Geldeira','500']
+    },
+    {
+        id:'07',
+        desc: ['Armario pequeno','100']
+    },
+    {
+        id:'08',
+        desc: ['Armario preto','100']
+    },
+    {
+        id:'09',
+        desc: ['Cadeira de imbuia','200']
+    },
+    {
+        id:'010',
+        desc: ['Mezinha de imbua','400']
     }
 ]
 export default function(){
@@ -37,10 +61,11 @@ export default function(){
 }
 const estilos2 = StyleSheet.create({
     item:{
-        backgroundColor:'#008',
+        backgroundColor:'#585858',
         padding: 15,
         marginVertical:8,
-        marginHorizontal:16
+        marginHorizontal:16,
+        borderRadius:10
     },
     prod:{
        fontSize:15,
