@@ -1,15 +1,49 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{Component} from 'react';
-import { StyleSheet, Text, View,  Image } from 'react-native'; 
-import C1  from './componentes/comp1'
+import { StyleSheet, Text, View,  Image, Button, Alert } from 'react-native';
+import Lp from './componentes/ListaPlana.js'; 
 import Estilos from './estilos/Estilos.js';
-import Caixas  from './componentes/Caixas';
 
 
+
+export default function App1(){
+return (
+    <View style={Estilos.conteiner}>
+      <Text style={Estilos.textoDia}>Vendo</Text>
+      <Text style={Estilos.textoPadrao}>Motivo mudança</Text>
+      <Lp/>
+   </View>
+    );
+};
+
+const estlilo = StyleSheet.create({
+  logo:{
+    width:400,
+    height:150,
+    resizeMode: 'stretch'
+
+  }
+})
+
+/*function msg(){
+ Alert.alert('OI', 'Eu estou chegando')
+}
+
+ const dobro=n=>n*2
+/* forma maids basica quando ha somente um paramtro ou quando fotr apenas uma linha " const soma=(n1,n2)=>n1+n2" */
+/*const soma=(n1,n2)=>{
+  return n1+n2 
+}
 export default function App1(){
   let fExibir= true;
   return(
     <View style={Estilos.conteiner}>
+      <Button
+        title="Mostrar mensagem"
+        onPress={msg}
+      />
+     <Text> {dobro(2)}</Text>
+     <Text> {soma(2,4)}</Text>
       <Image
         source={{uri:'http://marketingdeconteudo.com/wp-content/uploads/2016/08/imagens-gratis-1.jpg'}}
          style={estlilo.logo}
@@ -21,19 +55,10 @@ export default function App1(){
       {fExibir && <Text>RENDERIZAÇÃO MOSTRE</Text>}
       <Image 
         source={require('./assets/logo1.jpg')}
-        />
+      />
     </View>
   )
-}
-const estlilo = StyleSheet.create({
-  logo:{
-    width:400,
-    height:150,
-    resizeMode: 'stretch'
-
-  }
-})
-
+}*/
 
 
 
@@ -70,3 +95,10 @@ traduação do jsx para o conteudo nativo da pratforma do aplicativo nativo ios 
     );
   }
 }*/
+/* AEROFUNCTION:  (n)=> return n*2 apenas um parametro nao necessita os chaves e ainda posso tirar o return que
+nao vai dar erro
+ (n1,n2)=>{return n1+n2}
+  SINTXE BASICA 
+  uso uma variavel constante para referenciar no projetoaoinves de usar ma funcao.
+  
+  */

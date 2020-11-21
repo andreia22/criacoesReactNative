@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {View } from 'react-native';
 
-export default function(props) {
+/*Sexport default function(props) {
      return(
     <View style={{width:'100%',height:300, flexDirection:'column',backgroundColor:'#999',
      justifyContent:'center', alignSelf:'stretch'}}>

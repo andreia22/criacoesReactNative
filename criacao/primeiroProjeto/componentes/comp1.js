@@ -3,7 +3,7 @@ import React from 'react';
 import {StyleSheet, Text } from 'react-native';
 import Estilos from '../estilos/Estilos.js';
 
-let an;
+/*let an;
 export default function(props) {
     an= props.ano
     return(
