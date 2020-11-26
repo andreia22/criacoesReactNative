@@ -8,7 +8,11 @@ export default StyleSheet.create({
         flex:1,
         backgroundColor:'#fff',
         alignItems:'center',
-        marginTop: 20
+        marginTop: 20,
+        justifyContent:'center',
+        alignItems:'center'
+
+
     },
     textoDia:{
         color:'#f0f',

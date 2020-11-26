@@ -1,28 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import React,{Component} from 'react';
-import { StyleSheet, Text, View,  Image, Button, Alert, ImageBackground } from 'react-native';
+import React,{useState} from 'react';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import Lp from './componentes/ListaPlana.js'; 
 import Estilos from './estilos/Estilos.js';
-
-/*const imgbg1= './assets/imagens/back1.jpg'
-const imgbg2= './assets/imagens/back2.jpg'
-const imgbg3= './assets/imagens/back3.jpg' para usar com o requeire "source={require('imgbg1')}" */
+import CelularC from  './componentes/CelularesC'
+import CelularF from  './componentes/CelularesF'
+import CxTx from './componentes/CaixaTexto'
 
 export default function App1(){
-return (
-    <View style={Estilos.conteiner}>
-      <ImageBackground
-      source={{uri:'https://th.bing.com/th/id/OIP.VJ4sDDOOPuX3t1SAhmSClQHaE8?pid=Api&rs=1'}}
-      style={estilo.imagemFundo}
-      >
-      <Text style={Estilos.textoDia}>Vendo</Text>
-      <Text style={Estilos.textoPadrao}>Motivo mudança</Text>
-      <Lp/>
-      </ImageBackground>
-   </View>
-    );
+  return (
+    <SafeAreaView style={Estilos.conteiner}>
+      <Text >Vendo</Text>
+      <Text >Motivo mudança</Text>  
+      <CelularF marca="Motorola"/>
+      <CelularF marca="Sansung"/>
+      <CxTx/>
+    </SafeAreaView>
+  );
 };
-
 const estilo = StyleSheet.create({
   logo:{
     width:400,
@@ -30,10 +25,34 @@ const estilo = StyleSheet.create({
     resizeMode: 'stretch'
  },
  imagemFundo:{
-   flex:1,
+   flex:2,
    resizeMode:"cover",
  }
 })
+
+/*USESTATE COM COMPONENTES:
+ export default function App1(){
+  const [ligado,setLigado]=useState(true)
+  return (
+    <View style={Estilos.conteiner}>
+      <Button
+        title={ligado?"Desligar":"Ligar"}
+        onPress={()=>setLigado(!ligado)}
+      />
+      {ligado? 
+      <View>
+      <Text style={Estilos.textoDia}>Vendo</Text>
+      <Text style={Estilos.textoPadrao}>Motivo mudança</Text> 
+      </View>
+      :
+      <Text>***</Text>
+      }    
+   </View>
+    );
+};*/
+
+/*safeAreWiew fz a rendenizacao dos componentes dentro de uma area de segurança dentro dispositivo muito usado
+ no ios principalmete mais seguro que o Wiew*/
 
 /*function msg(){
  Alert.alert('OI', 'Eu estou chegando')
@@ -112,3 +131,11 @@ nao vai dar erro
   uso uma variavel constante para referenciar no projetoaoinves de usar ma funcao.
   
   */
+ /*const imgbg1= './assets/imagens/back1.jpg'{{uri:'https://th.bing.com/th/id/OIP.VJ4sDDOOPuX3t1SAhmSClQHaE8?pid=Api&rs=1'}}
+const imgbg2= './assets/imagens/back2.jpg'
+const imgbg3= './assets/imagens/back3.jpg' para usar com o requeire "source={require('imgbg1')}" */
+
+/*<ImageBackground
+source={{uri:'https://th.bing.com/th/id/OIP.VJ4sDDOOPuX3t1SAhmSClQHaE8?pid=Api&rs=1'}}
+style={estilo.imagemFundo}
+</ImageBackground>*/
