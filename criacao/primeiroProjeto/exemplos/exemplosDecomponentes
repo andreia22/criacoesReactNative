@@ -1,7 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import CelularC from  './componentes/CelularesC';
+import CelularF from  './componentes/CelularesF';
+import CxTx from './componentes/CaixaTexto';
+import Rolagem from './componentes/Rolagem';
+import Lp from './componentes/ListaPlana.js'; 
 import Estilos from './estilos/Estilos.js';
+import Toque from './componentes/Toques';
 import Modal from './componentes/Modal';
 
 export default function App1(){
@@ -9,10 +15,15 @@ export default function App1(){
     <SafeAreaView style={Estilos.conteiner}>
       <Text >Vendo</Text>
       <Text >Motivo mudança</Text> 
+      <CelularF marca="Motorola"/>
+      <CelularF marca="Sansung"/>
+      <CxTx/>
+      <Rolagem/> 
+      <Toque/>
       <Modal/>
     </SafeAreaView>
   );
-};
+}
 const estilo = StyleSheet.create({
   logo:{
     width:400,

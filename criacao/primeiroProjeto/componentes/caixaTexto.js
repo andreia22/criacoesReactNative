@@ -19,4 +19,4 @@ export  default function(){
         </View>
     )
 }
-/* informa como o teclado vai funcionar*/
+/* informa como o teclado vai funcionar se será tudo maisculo ou minusculo*/
