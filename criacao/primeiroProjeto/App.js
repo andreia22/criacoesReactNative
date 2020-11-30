@@ -2,14 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import Estilos from './estilos/Estilos.js';
-import Modal from './componentes/Modal';
+import RL from './componentes/Rolagem';
 
 export default function App1(){
   return (
     <SafeAreaView style={Estilos.conteiner}>
-      <Text >Vendo</Text>
-      <Text >Motivo mudança</Text> 
-      <Modal/>
+      <Text>Em Caçador</Text>
+      <Text>Por Enquanto</Text> 
+      <RL/>
     </SafeAreaView>
   );
 };
